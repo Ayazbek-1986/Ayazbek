@@ -2,322 +2,326 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QA Тест — 30 вопросов</title>
+<title>QA База и Тест</title>
+
 <style>
-  body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
-  .container { max-width: 1000px; margin: auto; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-  h1 { text-align: center; margin-bottom: 30px; }
-  .question { margin-bottom: 25px; }
-  .option { margin: 5px 0; }
-  button { padding: 10px 20px; cursor: pointer; margin-top: 10px; }
-  .correct { color: green; font-weight: bold; }
-  .wrong { color: red; font-weight: bold; }
-  .explanation { font-size: 0.9em; margin-top: 5px; color: #333; }
+
+body{
+font-family: Arial;
+background:#f4f6f9;
+margin:0;
+padding:0;
+}
+
+header{
+background:#2c3e50;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.container{
+width:900px;
+margin:auto;
+padding:20px;
+}
+
+.section{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 0 5px rgba(0,0,0,0.1);
+}
+
+h2{
+color:#2c3e50;
+}
+
+.question{
+margin-bottom:20px;
+}
+
+button{
+padding:10px 20px;
+background:#27ae60;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#219150;
+}
+
+.correct{
+color:green;
+font-weight:bold;
+}
+
+.wrong{
+color:red;
+font-weight:bold;
+}
+
 </style>
+
 </head>
+
 <body>
 
+<header>
+<h1>QA База + Тест</h1>
+</header>
+
 <div class="container">
-  <h1>QA Тест — 30 вопросов</h1>
-  <form id="quizForm">
 
-    <!-- Вопросы 1–30 -->
-    <div class="question">
-      <p>1. Какие задачи выполняет QA?</p>
-      <label class="option"><input type="checkbox" name="q1" value="a"> Предотвращение дефектов через процессы</label><br>
-      <label class="option"><input type="checkbox" name="q1" value="b"> Подготовка тестов к выполнению</label><br>
-      <label class="option"><input type="checkbox" name="q1" value="c"> Писать код фикций</label><br>
-      <label class="option"><input type="checkbox" name="q1" value="d"> Упражнение качества программной организации</label>
-    </div>
+<div class="section">
 
-    <div class="question">
-      <p>2. Что определяют Severity и Priority?</p>
-      <label class="option"><input type="checkbox" name="q2" value="a"> Severity показывает насколько критична ошибка</label><br>
-      <label class="option"><input type="checkbox" name="q2" value="b"> Priority показывает, насколько важно исправить баг</label><br>
-      <label class="option"><input type="checkbox" name="q2" value="c"> Высокий Priority всегда означает High Severity</label><br>
-      <label class="option"><input type="checkbox" name="q2" value="d"> Low Severity + High Priority может означать важную бизнес-функцию</label>
-    </div>
+<h2>Основные понятия QA</h2>
 
-    <div class="question">
-      <p>3. Какие виды тестирования относятся к Non-Functional?</p>
-      <label class="option"><input type="checkbox" name="q3" value="a"> Performance Testing</label><br>
-      <label class="option"><input type="checkbox" name="q3" value="b"> Security Testing</label><br>
-      <label class="option"><input type="checkbox" name="q3" value="c"> Functional Testing</label><br>
-      <label class="option"><input type="checkbox" name="q3" value="d"> Usability Testing</label>
-    </div>
+<b>QA (Quality Assurance)</b> — предотвращение дефектов через процессы разработки.
 
-    <div class="question">
-      <p>4. Когда заканчивается тестирование?</p>
-      <label class="option"><input type="checkbox" name="q4" value="a"> Выполнены Exit Criteria</label><br>
-      <label class="option"><input type="checkbox" name="q4" value="b"> Протестированы основные требования</label><br>
-      <label class="option"><input type="checkbox" name="q4" value="c"> Исправлены критические дефекты</label><br>
-      <label class="option"><input type="checkbox" name="q4" value="d"> Достигнут приемлемый уровень качества</label><br>
-      <label class="option"><input type="checkbox" name="q4" value="e"> Исчерпано время или бюджет</label>
-    </div>
+<b>QC (Quality Control)</b> — выявление дефектов в готовом продукте.
 
-    <div class="question">
-      <p>5. Какие этапы входят в STLC (Software Testing Life Cycle)?</p>
-      <label class="option"><input type="checkbox" name="q5" value="a"> Requirement Analysis</label><br>
-      <label class="option"><input type="checkbox" name="q5" value="b"> Test Planning</label><br>
-      <label class="option"><input type="checkbox" name="q5" value="c"> Development</label><br>
-      <label class="option"><input type="checkbox" name="q5" value="d"> Test Execution</label><br>
-      <label class="option"><input type="checkbox" name="q5" value="e"> Test Closure</label>
-    </div>
+<b>QM (Quality Management)</b> — управление качеством всей организации.
 
-    <div class="question">
-      <p>6. Какие документы относятся к тестовой документации?</p>
-      <label class="option"><input type="checkbox" name="q6" value="a"> Test Case</label><br>
-      <label class="option"><input type="checkbox" name="q6" value="b"> Test Scenario</label><br>
-      <label class="option"><input type="checkbox" name="q6" value="c"> Traceability Matrix</label><br>
-      <label class="option"><input type="checkbox" name="q6" value="d"> Test Plan</label>
-    </div>
+<br><br>
 
-    <div class="question">
-      <p>7. Какие методы HTTP используются для работы с API?</p>
-      <label class="option"><input type="checkbox" name="q7" value="a"> GET</label><br>
-      <label class="option"><input type="checkbox" name="q7" value="b"> POST</label><br>
-      <label class="option"><input type="checkbox" name="q7" value="c"> DELETE</label><br>
-      <label class="option"><input type="checkbox" name="q7" value="d"> PATCH</label><br>
-      <label class="option"><input type="checkbox" name="q7" value="e"> FETCH</label>
-    </div>
+<b>Баг (Defect)</b> — несоответствие фактического поведения ожидаемому результату.
 
-    <div class="question">
-      <p>8. Какие роли существуют в Scrum?</p>
-      <label class="option"><input type="checkbox" name="q8" value="a"> Product Owner</label><br>
-      <label class="option"><input type="checkbox" name="q8" value="b"> Scrum Master</label><br>
-      <label class="option"><input type="checkbox" name="q8" value="c"> Development Team</label><br>
-      <label class="option"><input type="checkbox" name="q8" value="d"> QA Analyst</label>
-    </div>
+</div>
 
-    <div class="question">
-      <p>9. Какие тесты входят в Test Pyramid?</p>
-      <label class="option"><input type="checkbox" name="q9" value="a"> Unit Tests</label><br>
-      <label class="option"><input type="checkbox" name="q9" value="b"> Integration Tests</label><br>
-      <label class="option"><input type="checkbox" name="q9" value="c"> UI / End-to-End Tests</label><br>
-      <label class="option"><input type="checkbox" name="q9" value="d"> Manual Exploratory Tests</label>
-    </div>
 
-    <div class="question">
-      <p>10. Что такое баг (Defect)?</p>
-      <label class="option"><input type="checkbox" name="q10" value="a"> Несоответствие фактического поведения системы ожиданиям</label><br>
-      <label class="option"><input type="checkbox" name="q10" value="b"> Новая фича, добавленная в продукт</label><br>
-      <label class="option"><input type="checkbox" name="q10" value="c"> Тест-кейс</label>
-    </div>
+<div class="section">
 
-    <div class="question">
-      <p>11. Какие виды тестирования относятся к дополнительным (Exploratory, Integration, System)?</p>
-      <label class="option"><input type="checkbox" name="q11" value="a"> Exploratory Testing</label><br>
-      <label class="option"><input type="checkbox" name="q11" value="b"> Integration Testing</label><br>
-      <label class="option"><input type="checkbox" name="q11" value="c"> System Testing</label><br>
-      <label class="option"><input type="checkbox" name="q11" value="d"> Unit Testing</label>
-    </div>
+<h2>Тест QA (30 вопросов)</h2>
 
-    <div class="question">
-      <p>12. Какие метрики QA используются для оценки качества?</p>
-      <label class="option"><input type="checkbox" name="q12" value="a"> Defect Density</label><br>
-      <label class="option"><input type="checkbox" name="q12" value="b"> Test Coverage</label><br>
-      <label class="option"><input type="checkbox" name="q12" value="c"> Pass Rate</label><br>
-      <label class="option"><input type="checkbox" name="q12" value="d"> Bug Leakage</label>
-    </div>
+<form id="quiz">
 
-    <div class="question">
-      <p>13. Что такое Positive Testing?</p>
-      <label class="option"><input type="checkbox" name="q13" value="a"> Проверка системы с корректными входными данными</label><br>
-      <label class="option"><input type="checkbox" name="q13" value="b"> Проверка обработки ошибок и некорректных данных</label>
-    </div>
+<div class="question">
+1. Что делает QA?<br>
+<input type="checkbox" name="q1" value="a"> Предотвращает дефекты<br>
+<input type="checkbox" name="q1" value="b"> Улучшает процессы<br>
+<input type="checkbox" name="q1" value="c"> Пишет только код
+</div>
 
-    <div class="question">
-      <p>14. Что такое Negative Testing?</p>
-      <label class="option"><input type="checkbox" name="q14" value="a"> Проверка системы с корректными входными данными</label><br>
-      <label class="option"><input type="checkbox" name="q14" value="b"> Проверка обработки ошибок и некорректных данных</label>
-    </div>
+<div class="question">
+2. Что такое баг?<br>
+<input type="radio" name="q2" value="a"> Ошибка в системе<br>
+<input type="radio" name="q2" value="b"> Новый функционал
+</div>
 
-    <div class="question">
-      <p>15. Что такое CI/CD?</p>
-      <label class="option"><input type="checkbox" name="q15" value="a"> Continuous Integration</label><br>
-      <label class="option"><input type="checkbox" name="q15" value="b"> Continuous Delivery</label><br>
-      <label class="option"><input type="checkbox" name="q15" value="c"> Continuous Deployment</label><br>
-      <label class="option"><input type="checkbox" name="q15" value="d"> Manual Testing</label>
-    </div>
+<div class="question">
+3. Что показывает Severity?<br>
+<input type="radio" name="q3" value="a"> Критичность бага<br>
+<input type="radio" name="q3" value="b"> Приоритет бизнеса
+</div>
 
-    <div class="question">
-      <p>16. Какие инструменты используются для API тестирования?</p>
-      <label class="option"><input type="checkbox" name="q16" value="a"> Postman</label><br>
-      <label class="option"><input type="checkbox" name="q16" value="b"> Swagger / OpenAPI</label><br>
-      <label class="option"><input type="checkbox" name="q16" value="c"> Selenium</label>
-    </div>
+<div class="question">
+4. Что показывает Priority?<br>
+<input type="radio" name="q4" value="a"> Насколько важно исправить<br>
+<input type="radio" name="q4" value="b"> Размер бага
+</div>
 
-    <div class="question">
-      <p>17. Какие коды HTTP означают ошибки на стороне клиента?</p>
-      <label class="option"><input type="checkbox" name="q17" value="a"> 400</label><br>
-      <label class="option"><input type="checkbox" name="q17" value="b"> 401</label><br>
-      <label class="option"><input type="checkbox" name="q17" value="c"> 500</label><br>
-      <label class="option"><input type="checkbox" name="q17" value="d"> 403</label>
-    </div>
+<div class="question">
+5. Что входит в SDLC?<br>
+<input type="checkbox" name="q5" value="a"> Development<br>
+<input type="checkbox" name="q5" value="b"> Testing<br>
+<input type="checkbox" name="q5" value="c"> Cooking
+</div>
 
-    <div class="question">
-      <p>18. Какие этапы входят в SDLC?</p>
-      <label class="option"><input type="checkbox" name="q18" value="a"> Requirement Analysis</label><br>
-      <label class="option"><input type="checkbox" name="q18" value="b"> System Design</label><br>
-      <label class="option"><input type="checkbox" name="q18" value="c"> Development</label><br>
-      <label class="option"><input type="checkbox" name="q18" value="d"> Testing</label><br>
-      <label class="option"><input type="checkbox" name="q18" value="e"> Deployment</label>
-    </div>
+<div class="question">
+6. Что входит в STLC?<br>
+<input type="checkbox" name="q6" value="a"> Test Planning<br>
+<input type="checkbox" name="q6" value="b"> Test Execution<br>
+<input type="checkbox" name="q6" value="c"> Game Design
+</div>
 
-    <div class="question">
-      <p>19. Какие виды тестирования проверки безопасности системы?</p>
-      <label class="option"><input type="checkbox" name="q19" value="a"> Penetration Testing</label><br>
-      <label class="option"><input type="checkbox" name="q19" value="b"> Vulnerability Scanning</label><br>
-      <label class="option"><input type="checkbox" name="q19" value="c"> Exploratory Testing</label>
-    </div>
+<div class="question">
+7. Smoke testing это?<br>
+<input type="radio" name="q7" value="a"> Быстрая проверка сборки<br>
+<input type="radio" name="q7" value="b"> Проверка безопасности
+</div>
 
-    <div class="question">
-      <p>20. Какие действия выполняет QA в Agile / Scrum?</p>
-      <label class="option"><input type="checkbox" name="q20" value="a"> Участие в Refinement и Planning</label><br>
-      <label class="option"><input type="checkbox" name="q20" value="b"> Подготовка тестов и выполнение тестирования инкремента</label><br>
-      <label class="option"><input type="checkbox" name="q20" value="c"> Разработка продукта с нуля</label>
-    </div>     <!-- Вопросы 21–30 -->
-    <div class="question">
-      <p>21. Какие типы тестирования проверяют взаимодействие компонентов?</p>
-      <label class="option"><input type="checkbox" name="q21" value="a"> Integration Testing</label><br>
-      <label class="option"><input type="checkbox" name="q21" value="b"> Unit Testing</label><br>
-      <label class="option"><input type="checkbox" name="q21" value="c"> System Testing</label>
-    </div>
+<div class="question">
+8. Regression testing?<br>
+<input type="radio" name="q8" value="a"> Проверка старого функционала после изменений<br>
+<input type="radio" name="q8" value="b"> Проверка дизайна
+</div>
 
-    <div class="question">
-      <p>22. Какие виды тестирования направлены на пользовательский опыт?</p>
-      <label class="option"><input type="checkbox" name="q22" value="a"> Usability Testing</label><br>
-      <label class="option"><input type="checkbox" name="q22" value="b"> Performance Testing</label><br>
-      <label class="option"><input type="checkbox" name="q22" value="c"> Regression Testing</label>
-    </div>
+<div class="question">
+9. Retesting?<br>
+<input type="radio" name="q9" value="a"> Повторная проверка исправленного бага<br>
+<input type="radio" name="q9" value="b"> Тестирование API
+</div>
 
-    <div class="question">
-      <p>23. Какие этапы входят в тест-план?</p>
-      <label class="option"><input type="checkbox" name="q23" value="a"> Цель тестирования</label><br>
-      <label class="option"><input type="checkbox" name="q23" value="b"> Объём работ</label><br>
-      <label class="option"><input type="checkbox" name="q23" value="c"> Ресурсы, сроки, риски</label><br>
-      <label class="option"><input type="checkbox" name="q23" value="d"> Дизайн интерфейса</label>
-    </div>
+<div class="question">
+10. Functional testing?<br>
+<input type="radio" name="q10" value="a"> Проверка бизнес логики<br>
+<input type="radio" name="q10" value="b"> Проверка нагрузки
+</div>
 
-    <div class="question">
-      <p>24. Какие типы багов могут существовать по влиянию на систему?</p>
-      <label class="option"><input type="checkbox" name="q24" value="a"> Critical / Major / Minor</label><br>
-      <label class="option"><input type="checkbox" name="q24" value="b"> High / Medium / Low</label><br>
-      <label class="option"><input type="checkbox" name="q24" value="c"> Urgent / Routine</label>
-    </div>
+<div class="question">
+11. Non functional testing?<br>
+<input type="checkbox" name="q11" value="a"> Performance<br>
+<input type="checkbox" name="q11" value="b"> Security<br>
+<input type="checkbox" name="q11" value="c"> Business logic
+</div>
 
-    <div class="question">
-      <p>25. Что такое Traceability Matrix?</p>
-      <label class="option"><input type="checkbox" name="q25" value="a"> Таблица, связывающая требования с тест-кейсами</label><br>
-      <label class="option"><input type="checkbox" name="q25" value="b"> План тестирования</label><br>
-      <label class="option"><input type="checkbox" name="q25" value="c"> Отчёт о дефектах</label>
-    </div>
+<div class="question">
+12. Integration testing?<br>
+<input type="radio" name="q12" value="a"> Проверка взаимодействия компонентов<br>
+<input type="radio" name="q12" value="b"> Проверка дизайна
+</div>
 
-    <div class="question">
-      <p>26. Какие виды тестирования проверяют стабильность при нагрузке?</p>
-      <label class="option"><input type="checkbox" name="q26" value="a"> Load Testing</label><br>
-      <label class="option"><input type="checkbox" name="q26" value="b"> Stress Testing</label><br>
-      <label class="option"><input type="checkbox" name="q26" value="c"> Functional Testing</label>
-    </div>
+<div class="question">
+13. System testing?<br>
+<input type="radio" name="q13" value="a"> Проверка всей системы<br>
+<input type="radio" name="q13" value="b"> Проверка одного метода
+</div>
 
-    <div class="question">
-      <p>27. Какие действия QA выполняет при отсутствии требований?</p>
-      <label class="option"><input type="checkbox" name="q27" value="a"> Уточняет у Product Owner / BA</label><br>
-      <label class="option"><input type="checkbox" name="q27" value="b"> Использует exploratory testing</label><br>
-      <label class="option"><input type="checkbox" name="q27" value="c"> Пропускает тестирование</label>
-    </div>
+<div class="question">
+14. Acceptance testing?<br>
+<input type="radio" name="q14" value="a"> Проверка заказчиком<br>
+<input type="radio" name="q14" value="b"> Проверка разработчиком
+</div>
 
-    <div class="question">
-      <p>28. Какие виды тестирования проверяют регрессию?</p>
-      <label class="option"><input type="checkbox" name="q28" value="a"> Regression Testing</label><br>
-      <label class="option"><input type="checkbox" name="q28" value="b"> Smoke Testing</label><br>
-      <label class="option"><input type="checkbox" name="q28" value="c"> Retesting</label>
-    </div>
+<div class="question">
+15. Exploratory testing?<br>
+<input type="radio" name="q15" value="a"> Свободное тестирование<br>
+<input type="radio" name="q15" value="b"> Только автоматизация
+</div>
 
-    <div class="question">
-      <p>29. Какие показатели измеряют качество релиза?</p>
-      <label class="option"><input type="checkbox" name="q29" value="a"> Bug Leakage</label><br>
-      <label class="option"><input type="checkbox" name="q29" value="b"> Pass Rate</label><br>
-      <label class="option"><input type="checkbox" name="q29" value="c"> Defect Density</label>
-    </div>
+<div class="question">
+16. Что такое Test Case?<br>
+<input type="radio" name="q16" value="a"> Документ с шагами проверки<br>
+<input type="radio" name="q16" value="b"> Код программы
+</div>
 
-    <div class="question">
-      <p>30. Какие преимущества автоматизации тестирования?</p>
-      <label class="option"><input type="checkbox" name="q30" value="a"> Быстрое повторное выполнение тестов</label><br>
-      <label class="option"><input type="checkbox" name="q30" value="b"> Повышение покрытия тестами</label><br>
-      <label class="option"><input type="checkbox" name="q30" value="c"> Снижение количества ручной работы</label>
-    </div>
+<div class="question">
+17. Test Scenario?<br>
+<input type="radio" name="q17" value="a"> Что тестировать<br>
+<input type="radio" name="q17" value="b"> Как писать код
+</div>
 
-    <button type="button" onclick="checkAnswers()">Проверить ответы</button>
-    
-  </form>
+<div class="question">
+18. Traceability Matrix?<br>
+<input type="radio" name="q18" value="a"> Связь требований и тестов<br>
+<input type="radio" name="q18" value="b"> UI дизайн
+</div>
 
-  <div id="result" style="margin-top:20px;"></div>
+<div class="question">
+19. HTTP GET?<br>
+<input type="radio" name="q19" value="a"> Получение данных<br>
+<input type="radio" name="q19" value="b"> Удаление данных
+</div>
+
+<div class="question">
+20. HTTP POST?<br>
+<input type="radio" name="q20" value="a"> Создание данных<br>
+<input type="radio" name="q20" value="b"> Чтение данных
+</div>
+
+<div class="question">
+21. HTTP DELETE?<br>
+<input type="radio" name="q21" value="a"> Удаление<br>
+<input type="radio" name="q21" value="b"> Получение
+</div>
+
+<div class="question">
+22. HTTP код 200?<br>
+<input type="radio" name="q22" value="a"> OK<br>
+<input type="radio" name="q22" value="b"> Error
+</div>
+
+<div class="question">
+23. HTTP код 404?<br>
+<input type="radio" name="q23" value="a"> Not Found<br>
+<input type="radio" name="q23" value="b"> Success
+</div>
+
+<div class="question">
+24. Postman используется для?<br>
+<input type="radio" name="q24" value="a"> API тестирования<br>
+<input type="radio" name="q24" value="b"> Дизайна сайта
+</div>
+
+<div class="question">
+25. CI это?<br>
+<input type="radio" name="q25" value="a"> Continuous Integration<br>
+<input type="radio" name="q25" value="b"> Code Interface
+</div>
+
+<div class="question">
+26. CD это?<br>
+<input type="radio" name="q26" value="a"> Continuous Delivery<br>
+<input type="radio" name="q26" value="b"> Code Development
+</div>
+
+<div class="question">
+27. Scrum роли?<br>
+<input type="checkbox" name="q27" value="a"> Product Owner<br>
+<input type="checkbox" name="q27" value="b"> Scrum Master<br>
+<input type="checkbox" name="q27" value="c"> Designer
+</div>
+
+<div class="question">
+28. Defect Density?<br>
+<input type="radio" name="q28" value="a"> Количество багов<br>
+<input type="radio" name="q28" value="b"> Размер команды
+</div>
+
+<div class="question">
+29. Test Coverage?<br>
+<input type="radio" name="q29" value="a"> Покрытие требований тестами<br>
+<input type="radio" name="q29" value="b"> Размер проекта
+</div>
+
+<div class="question">
+30. Bug Leakage?<br>
+<input type="radio" name="q30" value="a"> Баги найденные после релиза<br>
+<input type="radio" name="q30" value="b"> Баги до релиза
+</div>
+
+<button type="button" onclick="check()">Проверить ответы</button>
+
+</form>
+
+<h2 id="result"></h2>
+
+</div>
 </div>
 
 <script>
-const answers = {
-  q1: ['a','b','d'],
-  q2: ['a','b','d'],
-  q3: ['a','b','d'],
-  q4: ['a','b','c','d','e'],
-  q5: ['a','b','d','e'],
-  q6: ['a','b','c','d'],
-  q7: ['a','b','c','d'],
-  q8: ['a','b','c'],
-  q9: ['a','b','c'],
-  q10: ['a'],
-  q11: ['a','b','c'],
-  q12: ['a','b','c','d'],
-  q13: ['a'],
-  q14: ['b'],
-  q15: ['a','b','c'],
-  q16: ['a','b'],
-  q17: ['a','b','d'],
-  q18: ['a','b','c','d','e'],
-  q19: ['a','b'],
-  q20: ['a','b'],
-  q21: ['a','c'],
-  q22: ['a'],
-  q23: ['a','b','c'],
-  q24: ['a'],
-  q25: ['a'],
-  q26: ['a','b'],
-  q27: ['a','b'],
-  q28: ['a'],
-  q29: ['a','b','c'],
-  q30: ['a','b','c']
-};
 
-function checkAnswers() {
-  const resultDiv = document.getElementById('result');
-  resultDiv.innerHTML = '';
-  let totalCorrect = 0;
+function check(){
 
-  for (let q in answers) {
-    const selected = Array.from(document.querySelectorAll(`input[name="${q}"]:checked`)).map(el => el.value);
-    const correct = answers[q];
-    const isCorrect = selected.length === correct.length && selected.every(val => correct.includes(val));
+let score=0
 
-    const questionResult = document.createElement('div');
-    questionResult.innerHTML = `<strong>${q.toUpperCase()}:</strong> ${isCorrect ? '<span class="correct">Правильно</span>' : '<span class="wrong">Неправильно</span>'}`;
-    resultDiv.appendChild(questionResult);
-
-    if (!isCorrect) {
-      const explanation = document.createElement('div');
-      explanation.className = 'explanation';
-      explanation.innerText = `Правильные ответы: ${correct.join(', ')}`;
-      resultDiv.appendChild(explanation);
-    }
-
-    if (isCorrect) totalCorrect++;
-  }
-
-  const score = document.createElement('div');
-  score.innerHTML = `<h3>Ваш результат: ${totalCorrect} из ${Object.keys(answers).length}</h3>`;
-  resultDiv.appendChild(score);
+const correct={
+q2:"a",q3:"a",q4:"a",q7:"a",q8:"a",q9:"a",q10:"a",q12:"a",q13:"a",
+q14:"a",q15:"a",q16:"a",q17:"a",q18:"a",q19:"a",q20:"a",q21:"a",
+q22:"a",q23:"a",q24:"a",q25:"a",q26:"a",q28:"a",q29:"a",q30:"a"
 }
+
+for(let q in correct){
+
+let ans=document.querySelector(`input[name=${q}]:checked`)
+
+if(ans && ans.value===correct[q]){
+score++
+}
+
+}
+
+document.getElementById("result").innerHTML=
+"Ваш результат: "+score+" / 30"
+
+}
+
 </script>
+
 </body>
 </html>
